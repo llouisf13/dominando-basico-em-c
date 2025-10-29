@@ -1,8 +1,19 @@
 #include <stdio.h>
 
+int retorna(int vet[], int n, int buscar){
+    for (int i = 0; i < n; i++)
+    {
+        if (vet[i] == buscar)
+        {
+           return 1;
+        }
+    }
+    return 0;
+}
+
 int main()
 {
-    int n, i, procurar, encontrado = 0;
+    int n, i, procurar, resultado;
 
     printf("Digite quantos numeros voce quer digitar: \n");
     scanf("%d", &n);
@@ -19,27 +30,15 @@ int main()
     printf("Agora digite o numero que deseja buscar: \n");
     scanf("%d", &procurar);
 
-    //Varrendo para encontrar meu número...
-    
-    //1 = achou, 0 = não achou
+    resultado = retorna(vetor, n, procurar);
 
-    for (i = 0; i < n; i++)
+    if (resultado == 1)
     {
-        if (vetor[i] == procurar)
-        {
-            printf("Numero encontrado na posicao %d do vetor \n", i);
-            encontrado = 1;
-            break;
-        }
-        
-    }
-
-    if (encontrado == 0)
-    {
-        printf("Numero nao encontrado. \n");
+        printf("Numero encontrado. \n");
+    } else{
+        printf("Numero nao foi encontrado. \n");
     }
     
-    //Aqui encerro meu programa
-
+    
     return 0;
 }
