@@ -38,7 +38,13 @@ int main()
         break;
 
     case 4:
+        if (num2 == 0)
+        {
+            printf("Erro! Nao podemos dividir numeros por zero.\n")
+            result = 0;
+        }else{
         result = num1 / num2;
+        }
         break;
     
     default:
