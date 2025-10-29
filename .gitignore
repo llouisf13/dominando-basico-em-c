@@ -1,0 +1,5 @@
+# Ignorar arquivos compilados e pasta de saída
+output/
+*.exe
+*.out
+*.o
