@@ -2,7 +2,8 @@
 
 int main()
 {
-    int operacao, num1, num2, result;
+    int operacao;
+    float num1, num2, result;
     
     printf("Essa eh sua calculadora ----------\n");
     printf("Escolha qual operacao matematica voce deseja realizar:\n");
@@ -15,10 +16,10 @@ int main()
     //Entrada dos números para a operação:
 
     printf("Digite o primeiro numero: \n");
-    scanf("%d", &num1);
+    scanf("%f", &num1);
 
     printf("Digite o proximo numero: \n");
-    scanf("%d", &num2);
+    scanf("%f", &num2);
 
 
     //Calculadora em ação:
@@ -40,7 +41,7 @@ int main()
     case 4:
         if (num2 == 0)
         {
-            printf("Erro! Nao podemos dividir numeros por zero.\n")
+            printf("Erro! Nao podemos dividir numeros por zero.\n");
             result = 0;
         }else{
         result = num1 / num2;
@@ -53,7 +54,7 @@ int main()
     }
 
     //Mostrar meus resultados da calculadora:
-    printf("O resultado da calculadora eh: %d", result);
+    printf("O resultado da calculadora eh: %.2f", result);
 
     return 0;
 }
